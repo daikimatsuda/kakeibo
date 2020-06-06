@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="meta_header(title,links,scripts)">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title th:text="${title}">各ページタイトル</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<th:block th:replace="${links} ?: _" />
+    <th:block th:replace="${scripts} ?: _" />
+</head>
+<body>
+	<header th:fragment="header">
+		<nav class="navbar navbar-light bg-light" style="height: 96px;">
+		  <div class="navbar-header">
+	  		<a class="navbar-brand" href="#!"><img alt="Zaim" height="48" width="160" class="logo-default" src="//zaim-assets.s3-ap-northeast-1.amazonaws.com/assets/common/zaim.logo-611548ef40247b33e3d17e7aa71351450fa001d566499a26c71bb9b1d0524f3f.svg"></a>
+		  </div>
+		  <div class="navbar-collapse navbar-responsive-collapse collapse" style="height: 2px;">
+		  	<ul class="nav navbar-nav navbar-left nav-default">
+		  		<li class="btn-input-detail">
+		  			<a onclick="" href="/money/new"><span>
+					<i class="material-icons"></i>
+					家計簿を入力
+					</span>
+					</a>
+				</li>
+		  	</ul>
+		  </div>
+		</nav>
+	</header>
+</body>
+</html>		  	
