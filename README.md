@@ -2,7 +2,7 @@
 
 * userテーブル
 
-| colmun | type |  |
-----| ----
-| TD1 | TD3 |
+| Column | Type | Options |
+---- | ---- | ----
+| TD1 | TD3 | Options |
 
