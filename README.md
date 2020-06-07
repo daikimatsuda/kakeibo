@@ -4,5 +4,8 @@
 
 | Column | Type | Options |
 ---- | ---- | ----
-| TD1 | TD3 | Options |
+| ID | int | notNull |
+| username | String | notNull |
+| email | String | notNull |
+| password | String | notNull |
 
