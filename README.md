@@ -1,11 +1,7 @@
-# kakeibo
+## 設計用の資料ブランチ
 
-* userテーブル
+画面設計用にZaimのスクリーンショットをいくつか格納しました。
+作るかは分からないけどER図や業務フローなども盛り込んでいけたらと思います。
 
-| Column | Type | Options |
----- | ---- | ----
-| ID | int | notNull |
-| username | String | notNull |
-| email | String | notNull |
-| password | String | notNull |
+### ※marge禁止
 
