@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: meta_header('top',~{::link},~{::script})">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>家計簿アプリ</title>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/paymentForm.css" rel="stylesheet">
+<link href="/css/inputForm.css" rel="stylesheet">
+<link href="/css/field.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@1.8.0"></script>
+</head>
+<body>
+	<div th:replace="layout :: header"></div>
+	<div class="container" style="height: auto !important;">
+		<div class="row">
+			<div class="col-md-8 col-xs-12">
+				<div id="navbar-sub">
+				      <button type="button" class="btn-original" th:data-action="@{/money/new}" style="float:left;">支出</button>
+				      <button type="button" class="btn-original" th:data-action="@{/money/new/income}">収入</button>
+				</div>
+				<div class="wrap" id="input-main">
+					<div class="main-content main-bg-index">
+						<div class="page-header mt-4 mb-4">
+							<h2>
+								<span>家計簿を入力</span>
+							</h2>
+						</div>
+						<div class="discription">
+							<form class="form-input" method="post" th:action="@{/money/insert}" th:object="${moneyForm}">
+							<th:block th:if="${insertFlag}">
+							  <div class="bg-primary"><span class="text-white">入力完了</span></div>
+							</th:block>
+								<div>
+									<div class="PaymentForm-module__wrapper___2jBnm">
+										<div class="flexWrapper">
+											<div class="item">品目名</div>
+											<div class="item">
+												カテゴリ<span class="PaymentForm-module__genreLink___1Q39k">▼</span>
+											</div>
+											<div class="item">金額</div>
+											<div class="item">メモ</div>
+											<div class="PaymentForm-module__remove___1AF_B"></div>
+										</div>
+									</div>
+									<div>
+										<div class="flexWrapper">
+											<div class="item">
+												<input class="itemInput" name="item_name" type="text"
+													value="">
+											</div>
+											<div class="select item">
+												<div>
+													<input class="itemInput" name="item_name" type="text"
+														value="">
+												</div>
+											</div>
+											<div class="item">
+												<div>
+													<input class="itemInput" name="item_name" type="text"
+														value="">
+												</div>
+											</div>
+											<div class="item">
+												<input class="itemInput" name="item_name" type="text"
+													value="">
+											</div>
+										</div>
+									</div>
+									<div class="fieldSet">
+										<div class="flexFieldWrapper">
+											<div class="title">合計金額</div>
+											<div class="total">￥</div>
+										</div>
+										<div class="flexFieldWrapper">
+											<div class="title">出金元</div>
+											<div class="value">
+												<select class="selectBox">
+													<option></option>
+												</select>
+											</div>
+										</div>
+										<div class="flexFieldWrapper">
+											<div class="title">全体のカテゴリ</div>
+											<div class="value">
+												<div>
+													<input placeholder="全品目一括上書" autocomplete="off"
+														class="defaultInput" type="text" style="font-size: 14px;">
+												</div>
+											</div>
+										</div>
+										<div class="flexFieldWrapper">
+											<div class="title">日付</div>
+											<div class="value">
+												<div>
+													<input class="wrapper defaultInput" type="text" name="date"
+														value="2020年〇〇月〇〇日" style="font-size: 14px;">
+												</div>
+											</div>
+										</div>
+										<div class="flexFieldWrapper">
+											<div class="title">お店</div>
+											<div class="value">
+												<div>
+													<input placeholder="お店の名前を入力" autocomplete="off"
+														class="defaultInput" type="text" value=""
+														style="font-size: 14px;">
+												</div>
+											</div>
+										</div>
+										<div class="text-center">
+											<input type="submit" class="fullBtn btn btn-success" value="入力する">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		/* $('#actionBtn').click(function () {
+			$.ajax({
+				url : '[[@{/money/api/insert}]]',
+				dataType : 'json',
+				data : $('.form-input').serialize(),
+				type : 'POST',
+				cache : false
+			}).done(function(res, status, xhr) {
+				alert("入力しました。");
+			}).fail(function(xhr, status, error) {
+				/* 何もしない */
+//				alert("失敗");
+//			});
+//	}); */ 
+	</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+.wrapper {
+  input {
+    font-size: 14px;
+    &:focus {
+      box-shadow: 0 0 5px rgba(96, 127, 231, 1);
+      border: 1px solid rgba(96, 127, 231, 1);
+    }
+  }
+  input[type="number"] {
+    text-align: right;
+  }
+}
+
+.error {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: #ff5722;
+}
+
+.flexWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.flexFieldWrapper {
+  display: flex;
+  height: 60px;
+  width: 100%;
+}
+
+.item {
+  width: 24%;
+}
+.remove {
+  width: 4%;
+}
+
+.receiptWrapper {
+  display: flex;
+  margin-top: 20px;
+  input {
+    font-size: 14px;
+  }
+  input[type="number"] {
+    text-align: right;
+  }
+}
+
+.total {
+  font-size: 35px;
+  line-height: 1;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #0f9d58;
+}
+.halfBtn {
+  @extend .btn;
+  width: 50%;
+}
+.fullBtn {
+  @extend .btn;
+  width: 95%;
+}
+
+.fieldSet {
+  margin-top: 20px;
+}
+
+.title {
+  width: 20%;
+  margin-right: 20px;
+  padding-top: 5px;
+  text-align: right;
+}
+.value {
+  width: 80%;
+}
+
+.genreLink {
+  color: #1781b2;
+  cursor: pointer;
+}s
+
+.selectBox {
+  overflow: hidden;
+  height: 44px;
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+  width: calc(100% - 20px);
+  &::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: "";
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #666666;
+    pointer-events: none;
+  }
+  
+  .btn-original {
+  	font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top:20px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #0f9d58;
+    width:150px;
+    background:#eee;
+  }
+    
+}

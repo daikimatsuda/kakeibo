@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title th:text="${title}">各ページタイトル</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<th:block th:replace="${links} ?: _" />
     <th:block th:replace="${scripts} ?: _" />
@@ -14,18 +15,23 @@
 		  <div class="navbar-header">
 	  		<a class="navbar-brand" href="#!"><img alt="Zaim" height="48" width="160" class="logo-default" src="//zaim-assets.s3-ap-northeast-1.amazonaws.com/assets/common/zaim.logo-611548ef40247b33e3d17e7aa71351450fa001d566499a26c71bb9b1d0524f3f.svg"></a>
 		  </div>
-		  <div class="navbar-collapse navbar-responsive-collapse collapse" style="height: 2px;">
-		  	<ul class="nav navbar-nav navbar-left nav-default">
-		  		<li class="btn-input-detail">
-		  			<a onclick="" href="/money/new"><span>
-					<i class="material-icons"></i>
-					家計簿を入力
-					</span>
-					</a>
-				</li>
-		  	</ul>
-		  </div>
+		  <form id="money-form" th:action="@{/}" method="post">
+		  <button type="button" class="btn btn-success actionBtn d-flex justify-content-start" th:data-action="@{/money/new}">家計簿を入力</button>
+		  </form>
 		</nav>
+		<script>
+	window.MyLib = {};
+	// サブミット
+	MyLib.submit = function (formId) {
+	  form = document.getElementById(formId);
+	  form.submit(); 
+	}
+	  $('.actionBtn').click(function(e) {
+		 var form = $(e.currentTarget).closest('form')[0];
+		 form.action = $(e.currentTarget).data('action');
+		 MyLib.submit(form.id);
+	  });
+	</script>
 	</header>
 </body>
 </html>		  	
