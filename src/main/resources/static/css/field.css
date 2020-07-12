@@ -1,0 +1,39 @@
+.wrapper {
+  position: relative;
+}
+input[type="text"].defaultInput {
+  width: calc(100% - 20px);
+  height: 48px !important;
+  padding: 2px 5px;
+  font-size: 48px;
+  border: 1px solid #ccc;
+  text-align: right;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+input[type="text"].activate {
+  box-shadow: 0 0 5px #607fe7;
+  border: 1px solid #607fe7;
+}
+
+.calculator {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  margin: 0;
+  width: 320px;
+  z-index: 100;
+  list-style: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.calcIconWrapper {
+  position: absolute;
+  cursor: pointer;
+  left: 10px;
+  top: 10px;
+  height: 38px;
+  width: 36px;
+}

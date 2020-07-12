@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: meta_header('top',~{::link},~{::script})">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>家計簿アプリ</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div th:replace="layout :: header"></div>
+	<div class="container" style="height: auto !important;">
+	<form id="money-form" th:action="@{/}" method="post">
+    </form>
+	</div>
+</body>
+</html>

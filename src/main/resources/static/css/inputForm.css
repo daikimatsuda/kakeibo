@@ -1,0 +1,26 @@
+.item {
+  width: 24%;
+}
+.remove {
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.itemInput {
+  height: 32px;
+  padding: 2px 5px;
+  border: 1px solid #ccc;
+  font-size: 1.2em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: calc(100% - 5px);
+}
+.itemNumberInput {
+  @extend .itemInput;
+  text-align: right;
+}
+
+.select {
+  max-height: 32px;
+}

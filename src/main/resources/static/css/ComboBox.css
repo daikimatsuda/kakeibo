@@ -1,0 +1,138 @@
+.comboBox {
+  box-sizing: border-box;
+  width: 320px;
+}
+
+.defaultInput {
+  width: calc(100% - 20px);
+  height: 42px;
+  padding: 2px 5px;
+  border: 1px solid #ccc;
+  font-size: 1.2em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.select {
+  max-height: 32px;
+  width: calc(90%);
+  font-family: "Helvetica Neue, Helvetica, Arial, sans-serif";
+}
+
+.groupStyles {
+  display: "flex";
+  align-items: "center";
+  justify-content: "space-between";
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.selectRow {
+  cursor: pointer;
+  height: 35px;
+  &:hover {
+    background-color: ivory;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+.selectTitle {
+  padding-left: 18px;
+  color: blue;
+}
+
+.selectCode {
+  float: right;
+  padding-right: 12px;
+  font-size: 0.8em;
+  ::after {
+    clear: both;
+  }
+}
+
+.activate {
+  box-shadow: 0 0 5px rgba(96, 127, 231, 1);
+  padding: 3px 0px 3px 3px;
+  border: 1px solid rgba(96, 127, 231, 1);
+}
+
+.uiMenu {
+  position: absolute;
+  background-color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+  min-width: 160px;
+  z-index: 100;
+  list-style: none;
+  box-shadow: 0 0 5px rgba(96, 127, 231, 1);
+  padding: 3px 2px 3px 3px;
+  border: 1px solid rgba(96, 127, 231, 1);
+  color: #999;
+  padding: 10px 10px !important;
+  max-height: 260px;
+  min-height: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.uiMenuItem {
+  cursor: pointer;
+  padding: 6px 6px 2px 2px;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  &:hover {
+    background-color: ivory;
+  }
+}
+
+.element {
+  width: 100%;
+}
+
+.flexWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  padding-left: 10px;
+  padding-right: 20px;
+  font-weight: normal;
+  color: #337ab7;
+  &:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #337ab7;
+  }
+}
+
+.normalLabel {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 90%;
+  font-weight: normal;
+  color: #555;
+  &:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.supplement {
+  font-weight: lighter;
+  font-size: 0.9em;
+}
+
+.uiSubMenuItem {
+  @extend .uiMenuItem;
+}
+
+.active {
+  background-color: ivory;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #337ab7;
+}
